@@ -1,0 +1,18 @@
+<section class="h-full w-full flex items-center justify-center">
+    <div class="flex flex-col items-center">
+        <h1 class="text-4xl mb-4">FALLING LEAVES</h1>
+        <div class="flex justify-center">
+            <%= form_with url: home_solution_path, method: :post, class: "space-y-4 drop-shadow-xl" do |form| %>
+            <div class="">
+                <%= form.label :strings, "Ingrese una lista de cadenas (una por línea):", class: "block text-lg font-light text-gray-700" %>
+                <%= form.label :strings, "Para separar árboles, termine la última línea del primer árbol en *.", class: "block text-lg font-light text-gray-700" %>
+                <%= form.label :strings, "Para terminar la lista, termine la última línea en $.", class: "block text-lg font-light text-gray-700" %>
+                <%= form.text_area :strings, rows: 10, cols: 50, class: "mt-1 block w-full border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
+            </div>
+            <div class="flex justify-center mt-4">
+                <%= form.submit "Procesar", class: "px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</section>
